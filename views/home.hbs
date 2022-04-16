@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+
+<body>
+    <form id="form" action="/search" method="post">
+        <input id="search" name="name" type="text">
+        <button type="submit">Search!</button>
+    </form>
+
+    <form id="form" action="/topmovies" method="post">
+        <button type="submit">Get TOP 250 Movies!</button>
+    </form>
+
+    <form id="form" action="/soon" method="post">
+        <button type="submit">Get coming soon Movies!</button>
+    </form>
+
+    <form id="form" action="/intheaters" method="post">
+        <button type="submit">Now in cinemas</button>
+    </form>
+
+    <script>
+        const form = document.querySelectorAll("form");
+
+        for (let i = 0; i < form.length; i++) {
+            form[i].addEventListener("submit", function (event) {
+                alert("Sent!");
+            });
+        }
+    </script>
+</body>
+
+</html>
